@@ -16,6 +16,9 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* GosailAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* GosailAppTests.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		933CE4C35095451B8C04D00D /* RubikExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 579424FBAAFF4859B2EA83EA /* RubikExtraBold.ttf */; };
+		E74737D5863C4590BCF1428F /* RubikRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAAD739D7ECE4E8599C7D5BC /* RubikRegular.ttf */; };
+		69DD7C8723DC43058D499941 /* RubikSemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37FAB9CF276446BEA0F52F20 /* RubikSemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = GosailApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		579424FBAAFF4859B2EA83EA /* RubikExtraBold.ttf */ = {isa = PBXFileReference; name = "RubikExtraBold.ttf"; path = "../src/assets/fonts/RubikExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BAAD739D7ECE4E8599C7D5BC /* RubikRegular.ttf */ = {isa = PBXFileReference; name = "RubikRegular.ttf"; path = "../src/assets/fonts/RubikRegular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		37FAB9CF276446BEA0F52F20 /* RubikSemiBold.ttf */ = {isa = PBXFileReference; name = "RubikSemiBold.ttf"; path = "../src/assets/fonts/RubikSemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +146,7 @@
 				00E356EF1AD99517003FC87E /* GosailAppTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				0A1251B7834849619D14026D /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -156,6 +163,17 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		0A1251B7834849619D14026D /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				579424FBAAFF4859B2EA83EA /* RubikExtraBold.ttf */,
+				BAAD739D7ECE4E8599C7D5BC /* RubikRegular.ttf */,
+				37FAB9CF276446BEA0F52F20 /* RubikSemiBold.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -295,6 +313,9 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				933CE4C35095451B8C04D00D /* RubikExtraBold.ttf in Resources */,
+				E74737D5863C4590BCF1428F /* RubikRegular.ttf in Resources */,
+				69DD7C8723DC43058D499941 /* RubikSemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

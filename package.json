@@ -4,12 +4,12 @@
   "private": true,
   "scripts": {
     "start": "react-native start",
-    "android": "react-native start && react-native run-android",
-    "ios": "react-native start && react-native run-ios",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
     "test": "jest",
-    "lint": "eslint . --ext .ts",
-    "lint:fix": "eslint . --ext .ts --fix",
-    "format": "prettier --config .prettierrc.js 'src/**/*.ts' --write"
+    "lint": "eslint src/**/*.{js,ts,tsx}",
+    "lint:fix": "eslint src/**/*.{js,ts,tsx} --fix",
+    "format": "prettier --write --config .prettierrc.js 'src/**/*.{js,ts,tsx}'"
   },
   "husky": {
     "hooks": {
@@ -17,7 +17,7 @@
     }
   },
   "lint-staged": {
-    "*.ts": "eslint --fix && prettier --config .prettierrc.js --write"
+    "*.{js,ts,tsx}": "eslint --fix"
   },
   "dependencies": {
     "react": "16.13.1",
