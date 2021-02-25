@@ -11,14 +11,6 @@
     "lint:fix": "eslint src/**/*.{js,ts,tsx} --fix",
     "format": "prettier --write --config .prettierrc.js 'src/**/*.{js,ts,tsx}'"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx}": "eslint --fix"
-  },
   "dependencies": {
     "react": "16.13.1",
     "react-native": "0.63.4"

@@ -12,5 +12,9 @@ module.exports = {
   rules: {
     'no-console': 1,
     'prettier/prettier': 2
+  },
+  env: {
+    'react-native/react-native': true,
+    jest: true
   }
 }

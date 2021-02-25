@@ -8,8 +8,8 @@ const Welcome: React.FC<IThemeProps> = ({theme}) => {
     <View>
       <Text
         style={{
-          fontFamily: theme?.fonts?.rubikExtraBold,
-          color: theme?.colors?.coolPink
+          fontFamily: theme.fonts.rubikExtraBold,
+          color: theme.colors.coolPink
         }}>
         Hi from RN!
       </Text>
