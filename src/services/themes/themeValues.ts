@@ -15,7 +15,7 @@ export type ThemeProps = {
 }
 
 export interface IThemeProps {
-  theme: ThemeProps
+  theme?: ThemeProps
 }
 
 export const lightTheme: ThemeProps = {
