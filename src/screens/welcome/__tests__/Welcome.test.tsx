@@ -1,9 +1,9 @@
 import 'react-native'
 import React from 'react'
 import {render} from '@testing-library/react-native'
-import store from '../../store'
+import store from '../../../store'
 import {Provider} from 'react-redux'
-import {lightTheme} from '../../services/themes'
+import {lightTheme} from '../../../services/themes'
 import Welcome from '../Welcome'
 
 const newRender = (Component: React.FC) =>
