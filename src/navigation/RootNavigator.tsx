@@ -1,9 +1,9 @@
 import React from 'react'
 import {createStackNavigator} from '@react-navigation/stack'
 
-import screens from './screens'
+import screens, {RootStackParamList} from './screens'
 
-const RootStack = createStackNavigator()
+const RootStack = createStackNavigator<RootStackParamList>()
 
 const MainStack: React.FC = () => {
   return (

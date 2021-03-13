@@ -1,20 +1,14 @@
 import React from 'react'
 import {View, Text, Button} from 'react-native'
+import {StackScreenProps} from '@react-navigation/stack'
 
-import {StackNavigationProp} from '@react-navigation/stack'
 import {HOME_ROUTE} from '../../navigation/constants/routes'
+import {RootStackParamList} from '../../navigation/screens'
 import {useAppSelector} from '../../hooks/storeHooks'
 import {welcomeValueSelector} from '../../store/slices/welcome/welcome'
 import {withTheme, IThemeProps} from '../../services/themes'
 
-type ParamList = {
-  WelcomeRoute: undefined
-  [HOME_ROUTE]: {userId: string} | undefined
-}
-
-interface WelcomeProps extends IThemeProps {
-  navigation: StackNavigationProp<ParamList, 'WelcomeRoute'>
-}
+interface WelcomeProps extends IThemeProps, StackScreenProps<RootStackParamList, 'WelcomeRoute'> {}
 
 const Welcome: React.FC<WelcomeProps> = ({navigation, theme}) => {
   const title = useAppSelector(welcomeValueSelector)

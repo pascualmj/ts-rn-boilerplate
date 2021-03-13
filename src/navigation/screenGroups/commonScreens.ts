@@ -1,16 +1,21 @@
-import {HOME_ROUTE, WELCOME_ROUTE} from '../constants/routes'
+import {IRouteConfig} from '../../types/navigationTypes'
 
 import WelcomeScreen from '../../screens/welcome/Welcome'
 import HomeScreen from '../../screens/home/Home'
 
-const commonScreens = [
+export type CommonScreensParamList = {
+  HomeRoute: undefined
+  WelcomeRoute: undefined
+}
+
+const commonScreens: IRouteConfig<CommonScreensParamList>[] = [
   {
-    name: WELCOME_ROUTE,
+    name: 'WelcomeRoute',
     component: WelcomeScreen,
     options: {}
   },
   {
-    name: HOME_ROUTE,
+    name: 'HomeRoute',
     component: HomeScreen,
     options: {}
   }

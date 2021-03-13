@@ -1,4 +1,6 @@
-import commonScreens from './screenGroups/commonScreens'
+import commonScreens, {CommonScreensParamList} from './screenGroups/commonScreens'
+
+export type RootStackParamList = CommonScreensParamList
 
 const screens = [...commonScreens]
 
