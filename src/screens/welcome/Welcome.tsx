@@ -8,7 +8,9 @@ import {useAppSelector} from '../../hooks/storeHooks'
 import {welcomeValueSelector} from '../../store/slices/welcome/welcome'
 import {withTheme, IThemeProps} from '../../services/themes'
 
-interface WelcomeProps extends IThemeProps, StackScreenProps<RootStackParamList, 'WelcomeRoute'> {}
+export interface WelcomeProps
+  extends IThemeProps,
+    StackScreenProps<RootStackParamList, 'WelcomeRoute'> {}
 
 const Welcome: React.FC<WelcomeProps> = ({navigation, theme}) => {
   const title = useAppSelector(welcomeValueSelector)
