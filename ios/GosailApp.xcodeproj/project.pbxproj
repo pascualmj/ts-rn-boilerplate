@@ -17,12 +17,12 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* GosailAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* GosailAppTests.m */; };
 		364D20C57583E673C8F7B5AF /* libPods-GosailApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C01327BE7DC3032A385EFEB /* libPods-GosailApp-tvOSTests.a */; };
-		69DD7C8723DC43058D499941 /* RubikSemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37FAB9CF276446BEA0F52F20 /* RubikSemiBold.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		933CE4C35095451B8C04D00D /* RubikExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 579424FBAAFF4859B2EA83EA /* RubikExtraBold.ttf */; };
 		DD5E6747677B021C247F6346 /* libPods-GosailApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12FED5B295425FE9917E30A8 /* libPods-GosailApp.a */; };
-		E74737D5863C4590BCF1428F /* RubikRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAAD739D7ECE4E8599C7D5BC /* RubikRegular.ttf */; };
 		FB37C26ED4F3778BF61E017D /* libPods-GosailApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0C5441D8363B5BA9DBC2A6 /* libPods-GosailApp-tvOS.a */; };
+		815B311E44D4452994077508 /* Rubik-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D307E3DEC82450BAEC1EBB3 /* Rubik-ExtraBold.ttf */; };
+		AC4A1F40EBA84032AA82E3AF /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6486C1F6008840C285C18EDC /* Rubik-Regular.ttf */; };
+		70B98364509B4361ACEF3D32 /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E1B6374E3DC41E292A68731 /* Rubik-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,21 +58,21 @@
 		275E10BBF7697940D33BEC39 /* libPods-GosailApp-GosailAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GosailApp-GosailAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E47B1E0B4A5D006451C7 /* GosailApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GosailApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* GosailApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GosailApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		37FAB9CF276446BEA0F52F20 /* RubikSemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = RubikSemiBold.ttf; path = ../src/assets/fonts/RubikSemiBold.ttf; sourceTree = "<group>"; };
 		3D0C5441D8363B5BA9DBC2A6 /* libPods-GosailApp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GosailApp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		439CF8B9B3CD6C08F6B702C0 /* Pods-GosailApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GosailApp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-GosailApp-tvOSTests/Pods-GosailApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		579424FBAAFF4859B2EA83EA /* RubikExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = RubikExtraBold.ttf; path = ../src/assets/fonts/RubikExtraBold.ttf; sourceTree = "<group>"; };
 		705B982B1EC1FB12101F5F73 /* Pods-GosailApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GosailApp.debug.xcconfig"; path = "Target Support Files/Pods-GosailApp/Pods-GosailApp.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = GosailApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DD0C2A42EE333838E4773CE /* Pods-GosailApp-GosailAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GosailApp-GosailAppTests.debug.xcconfig"; path = "Target Support Files/Pods-GosailApp-GosailAppTests/Pods-GosailApp-GosailAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9A5EE5B5C13326D07DD058EB /* Pods-GosailApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GosailApp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-GosailApp-tvOSTests/Pods-GosailApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6D9B1F033578932370110AD /* Pods-GosailApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GosailApp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-GosailApp-tvOS/Pods-GosailApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		B57A20943D0F00E519EB436D /* Pods-GosailApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GosailApp.release.xcconfig"; path = "Target Support Files/Pods-GosailApp/Pods-GosailApp.release.xcconfig"; sourceTree = "<group>"; };
-		BAAD739D7ECE4E8599C7D5BC /* RubikRegular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = RubikRegular.ttf; path = ../src/assets/fonts/RubikRegular.ttf; sourceTree = "<group>"; };
 		C58C686915D2C5669FA116D4 /* Pods-GosailApp-GosailAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GosailApp-GosailAppTests.release.xcconfig"; path = "Target Support Files/Pods-GosailApp-GosailAppTests/Pods-GosailApp-GosailAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		DD7C7718CD0A4AA0C4FB11B7 /* Pods-GosailApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GosailApp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-GosailApp-tvOS/Pods-GosailApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		5D307E3DEC82450BAEC1EBB3 /* Rubik-ExtraBold.ttf */ = {isa = PBXFileReference; name = "Rubik-ExtraBold.ttf"; path = "../src/assets/fonts/Rubik-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6486C1F6008840C285C18EDC /* Rubik-Regular.ttf */ = {isa = PBXFileReference; name = "Rubik-Regular.ttf"; path = "../src/assets/fonts/Rubik-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5E1B6374E3DC41E292A68731 /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; name = "Rubik-SemiBold.ttf"; path = "../src/assets/fonts/Rubik-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,9 +131,9 @@
 		0A1251B7834849619D14026D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				579424FBAAFF4859B2EA83EA /* RubikExtraBold.ttf */,
-				BAAD739D7ECE4E8599C7D5BC /* RubikRegular.ttf */,
-				37FAB9CF276446BEA0F52F20 /* RubikSemiBold.ttf */,
+				5D307E3DEC82450BAEC1EBB3 /* Rubik-ExtraBold.ttf */,
+				6486C1F6008840C285C18EDC /* Rubik-Regular.ttf */,
+				5E1B6374E3DC41E292A68731 /* Rubik-SemiBold.ttf */,
 			);
 			name = Resources;
 			path = "";
@@ -360,9 +360,9 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				933CE4C35095451B8C04D00D /* RubikExtraBold.ttf in Resources */,
-				E74737D5863C4590BCF1428F /* RubikRegular.ttf in Resources */,
-				69DD7C8723DC43058D499941 /* RubikSemiBold.ttf in Resources */,
+				815B311E44D4452994077508 /* Rubik-ExtraBold.ttf in Resources */,
+				AC4A1F40EBA84032AA82E3AF /* Rubik-Regular.ttf in Resources */,
+				70B98364509B4361ACEF3D32 /* Rubik-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

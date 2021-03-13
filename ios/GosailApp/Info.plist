@@ -55,9 +55,9 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>RubikExtraBold.ttf</string>
-		<string>RubikRegular.ttf</string>
-		<string>RubikSemiBold.ttf</string>
+		<string>Rubik-ExtraBold.ttf</string>
+		<string>Rubik-Regular.ttf</string>
+		<string>Rubik-SemiBold.ttf</string>
 	</array>
 </dict>
 </plist>

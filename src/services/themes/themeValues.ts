@@ -28,8 +28,8 @@ export const lightTheme: ThemeProps = {
     backBlack: '#000'
   },
   fonts: {
-    rubikRegular: 'RubikRegular',
-    rubikSemiBold: 'RubikSemiBold',
-    rubikExtraBold: 'RubikExtraBold'
+    rubikRegular: 'Rubik-Regular',
+    rubikSemiBold: 'Rubik-SemiBold',
+    rubikExtraBold: 'Rubik-ExtraBold'
   }
 }
