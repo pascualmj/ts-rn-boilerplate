@@ -1,11 +1,11 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {View, Text, Button} from 'react-native'
 import {StackScreenProps} from '@react-navigation/stack'
 
 import {HOME_ROUTE} from '../../navigation/constants/routes'
 import {RootStackParamList} from '../../navigation/screens'
-import {useAppSelector} from '../../hooks/storeHooks'
-import {welcomeValueSelector} from '../../store/slices/welcome/welcome'
+import {useAppSelector, useAppDispatch} from '../../hooks/storeHooks'
+import {fetchWelcome, welcomeValueSelector} from '../../store/slices/welcome/welcome'
 import {withTheme, IThemeProps} from '../../services/themes'
 
 export interface WelcomeProps
@@ -13,7 +13,12 @@ export interface WelcomeProps
     StackScreenProps<RootStackParamList, 'WelcomeRoute'> {}
 
 const Welcome: React.FC<WelcomeProps> = ({navigation, theme}) => {
+  const dispatch = useAppDispatch()
   const title = useAppSelector(welcomeValueSelector)
+
+  useEffect(() => {
+    dispatch(fetchWelcome())
+  })
 
   const goHome = () => navigation.navigate(HOME_ROUTE)
 

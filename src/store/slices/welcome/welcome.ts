@@ -27,6 +27,10 @@ const welcomeSlice = createSlice({
     fetchTitleSuccess(state, action: PayloadAction<string>) {
       state.isLoading = false
       state.value = action.payload
+    },
+    fetchTitleFailure(state) {
+      state.isLoading = false
+      state.error = true
     }
   }
 })
@@ -34,8 +38,8 @@ const welcomeSlice = createSlice({
 const {actions, reducer} = welcomeSlice
 
 // Actions
-export const {fetchTitleStart, fetchTitleSuccess} = actions
-export const fetchTitle = createAction<string>(`${sliceName}/fetchTitle`)
+export const {fetchTitleStart, fetchTitleSuccess, fetchTitleFailure} = actions
+export const fetchWelcome = createAction<void>(`${sliceName}/fetchWelcome`)
 
 // Selectors
 export const welcomeValueSelector = createSelector(
