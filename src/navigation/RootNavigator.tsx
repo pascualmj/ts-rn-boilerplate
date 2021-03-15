@@ -1,6 +1,8 @@
 import React from 'react'
 import {createStackNavigator} from '@react-navigation/stack'
+import {NavigationContainer} from '@react-navigation/native'
 
+import {navigationRef} from '../services/navigation'
 import screens, {RootStackParamList} from './screens'
 
 const RootStack = createStackNavigator<RootStackParamList>()
@@ -20,4 +22,12 @@ const MainStack: React.FC = () => {
   )
 }
 
-export default MainStack
+const RootNavigator: React.FC = () => {
+  return (
+    <NavigationContainer ref={navigationRef}>
+      <MainStack />
+    </NavigationContainer>
+  )
+}
+
+export default RootNavigator
