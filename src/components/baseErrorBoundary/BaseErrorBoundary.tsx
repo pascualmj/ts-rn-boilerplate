@@ -4,6 +4,7 @@ import RNRestart from 'react-native-restart'
 
 interface IErrorBoundaryProps {
   children: ReactNode
+  logger: (err: Error) => unknown
 }
 
 interface IErrorBoundaryState {
@@ -22,7 +23,7 @@ class ErrorBoundary extends Component<IErrorBoundaryProps, IErrorBoundaryState> 
 
   /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
   public componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
-    // Log info about the error to an external service
+    this.props.logger(error)
   }
 
   public restartApp(): void {
