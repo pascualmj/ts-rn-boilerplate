@@ -9,7 +9,9 @@
     "test": "jest",
     "lint": "eslint src/**/*.{js,ts,tsx}",
     "lint:fix": "eslint src/**/*.{js,ts,tsx} --fix",
-    "format": "prettier --write --config .prettierrc.js 'src/**/*.{js,ts,tsx}'"
+    "format": "prettier --write --config .prettierrc.js 'src/**/*.{js,ts,tsx}'",
+    "storybook": "(adb reverse tcp:7007 tcp:7007 || true) && start-storybook -p 7007",
+    "storybook:loader": "rnstl"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
@@ -34,6 +36,13 @@
     "@babel/core": "^7.8.4",
     "@babel/runtime": "^7.8.4",
     "@react-native-community/eslint-config": "^1.1.0",
+    "@storybook/addon-actions": "^5.3.21",
+    "@storybook/addon-knobs": "^5.3.21",
+    "@storybook/addon-links": "^5.3.21",
+    "@storybook/addon-ondevice-actions": "^5.3.23",
+    "@storybook/addon-ondevice-knobs": "^5.3.25",
+    "@storybook/react-native": "^5.3.25",
+    "@storybook/react-native-server": "^5.3.23",
     "@testing-library/jest-native": "^3.4.3",
     "@testing-library/react-native": "^7.1.0",
     "@types/jest": "^26.0.20",
@@ -45,6 +54,7 @@
     "@typescript-eslint/eslint-plugin": "^4.15.1",
     "@typescript-eslint/parser": "^4.15.1",
     "babel-jest": "^25.1.0",
+    "babel-loader": "^8.2.2",
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-prettier": "^3.3.1",
@@ -53,7 +63,18 @@
     "lint-staged": "^10.5.4",
     "metro-react-native-babel-preset": "^0.59.0",
     "prettier": "^2.2.1",
+    "react-dom": "^16.13.1",
+    "react-native-storybook-loader": "^2.0.2",
     "react-test-renderer": "16.13.1",
     "typescript": "^4.1.5"
+  },
+  "config": {
+    "react-native-storybook-loader": {
+      "searchDir": [
+        "./src/components"
+      ],
+      "pattern": "**/*.stories.js",
+      "outputFile": "./storybook/storyLoader.js"
+    }
   }
 }
