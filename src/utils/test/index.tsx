@@ -1,8 +1,7 @@
 import React, {Children} from 'react'
 import {Provider} from 'react-redux'
 import * as TestingLibraryRN from '@testing-library/react-native'
-
-import store from '../../store'
+import configureStore from 'redux-mock-store'
 
 interface IMockedNavigationProps {
   navigate: jest.Mock
@@ -17,8 +16,7 @@ interface IRenderReturnValue extends TestingLibraryRN.RenderAPI {
   navigation: IMockedNavigationProps
 }
 
-const defaultState = store.getState()
-const mockedStore = store as jest.Mocked<typeof store>
+const mockStore = configureStore()
 const mockedNavigation: IMockedNavigationProps = {
   navigate: jest.fn()
 }
@@ -27,7 +25,7 @@ export const render = (
   Component: React.ReactElement,
   options: IRenderOptions
 ): IRenderReturnValue => {
-  mockedStore.getState.mockReturnValue(options.initialState || defaultState)
+  const store = mockStore(options.initialState || {})
 
   return {
     ...TestingLibraryRN.render(

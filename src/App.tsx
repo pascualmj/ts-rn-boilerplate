@@ -1,7 +1,9 @@
 import 'react-native-gesture-handler'
 import React from 'react'
 import {Provider as StoreProvider} from 'react-redux'
+import Reactotron from 'reactotron-react-native'
 
+import StorybookUIHMRRoot from '../storybook/StorybookUIHMRRoot'
 import initSentry, {SentryErrorBoundary} from './services/sentry'
 import store from './store'
 import ThemeProvider from './services/themes/context/ThemeContext'
@@ -22,4 +24,4 @@ const App: React.FC = () => {
   )
 }
 
-export default App
+export default __DEV__ ? Reactotron.storybookSwitcher(StorybookUIHMRRoot)(App) : App

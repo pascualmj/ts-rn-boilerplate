@@ -18,7 +18,7 @@ const Welcome: React.FC<WelcomeProps> = ({navigation, theme}) => {
 
   useEffect(() => {
     dispatch(fetchWelcome())
-  })
+  }, [dispatch])
 
   const goHome = () => navigation.navigate(HOME_ROUTE)
 
