@@ -10,7 +10,7 @@ interface WelcomeState {
 
 const sliceName = 'welcome'
 
-const initialState: WelcomeState = {
+export const initialState: WelcomeState = {
   value: 'Hi from React Native!',
   isLoading: false,
   error: false
