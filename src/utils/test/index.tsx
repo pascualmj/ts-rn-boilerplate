@@ -1,19 +1,38 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import axios from 'axios'
 import React, {Children} from 'react'
 import {Provider} from 'react-redux'
-import * as TestingLibraryRN from '@testing-library/react-native'
 import configureStore from 'redux-mock-store'
+import * as ReduxSaga from 'redux-saga'
+import * as TestingLibraryRN from '@testing-library/react-native'
+import {AnyAction, PayloadAction} from '@reduxjs/toolkit'
+
+import apiClient from '../../services/apiClient'
+import * as navigationService from '../../services/navigation'
 
 interface IMockedNavigationProps {
   navigate: jest.Mock
 }
 
 interface IRenderOptions {
-  /* eslint-disable-next-line @typescript-eslint/no-explicit-any*/
   initialState?: any
 }
 
 interface IRenderReturnValue extends TestingLibraryRN.RenderAPI {
   navigation: IMockedNavigationProps
+}
+
+interface IRunSagaOptions {
+  saga: () => Generator<any, any, any>
+  initialState?: any
+  initialAction?: PayloadAction<any>
+}
+
+interface IRunSagaReturnValue {
+  dispatched: AnyAction[]
+  navigationService: {
+    navigate: any
+  }
 }
 
 const mockStore = configureStore()
@@ -38,5 +57,29 @@ export const render = (
     navigation: mockedNavigation
   }
 }
+
+export const runSaga = async ({
+  saga,
+  initialState,
+  initialAction
+}: IRunSagaOptions): Promise<IRunSagaReturnValue> => {
+  const dispatched: AnyAction[] = []
+
+  await ReduxSaga.runSaga<any, any, any>(
+    {
+      dispatch: action => dispatched.push(action),
+      getState: () => initialState || {}
+    },
+    saga,
+    initialAction
+  ).toPromise()
+
+  return {
+    dispatched,
+    navigationService
+  }
+}
+
+export const apiClientMock = apiClient as jest.Mocked<typeof axios>
 
 export * from '@testing-library/react-native'
