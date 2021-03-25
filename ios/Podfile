@@ -3,12 +3,12 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'GosailApp' do
+target 'RNTSBoilerplate' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
 
-  target 'GosailAppTests' do
+  target 'RNTSBoilerplateTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -23,10 +23,10 @@ target 'GosailApp' do
   end
 end
 
-target 'GosailApp-tvOS' do
-  # Pods for GosailApp-tvOS
+target 'RNTSBoilerplate-tvOS' do
+  # Pods for RNTSBoilerplate-tvOS
 
-  target 'GosailApp-tvOSTests' do
+  target 'RNTSBoilerplate-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
