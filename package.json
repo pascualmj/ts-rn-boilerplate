@@ -8,6 +8,7 @@
     "ios": "react-native run-ios",
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "lint": "eslint src/**/*.{js,ts,tsx}",
     "lint:fix": "eslint src/**/*.{js,ts,tsx} --fix",
     "format": "prettier --write --config .prettierrc.js 'src/**/*.{js,ts,tsx}'",
