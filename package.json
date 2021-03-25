@@ -9,6 +9,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
+    "npm:cache:clear": "watchman watch-del-all && rm -rf $TMPDIR/react-native-packager-cache-* && rm -rf $TMPDIR/metro-bundler-cache-* && npm cache clean --force && npm start -- --reset-cache",
     "lint": "eslint src/**/*.{js,ts,tsx}",
     "lint:fix": "eslint src/**/*.{js,ts,tsx} --fix",
     "format": "prettier --write --config .prettierrc.js 'src/**/*.{js,ts,tsx}'",
