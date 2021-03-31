@@ -12,6 +12,7 @@
 - Storybook
 - Reactotron
 - Sentry
+- Error Boundary
 - Custom Fonts
 - Theme Context
 - Eslint & Prettier
