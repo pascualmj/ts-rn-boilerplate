@@ -317,6 +317,8 @@ PODS:
   - RNSentry (2.3.0):
     - React-Core
     - Sentry (= 6.1.4)
+  - RNSVG (12.1.1-0):
+    - React
   - Sentry (6.1.4):
     - Sentry/Core (= 6.1.4)
   - Sentry/Core (6.1.4)
@@ -380,6 +382,7 @@ DEPENDENCIES:
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - "RNSentry (from `../node_modules/@sentry/react-native`)"
+  - RNSVG (from `../node_modules/react-native-svg`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -467,6 +470,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-screens"
   RNSentry:
     :path: "../node_modules/@sentry/react-native"
+  RNSVG:
+    :path: "../node_modules/react-native-svg"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -516,6 +521,7 @@ SPEC CHECKSUMS:
   RNReanimated: e03f7425cb7a38dcf1b644d680d1bfc91c3337ad
   RNScreens: f0d7a2a440a8ba9f4574ca1ddb3368f473891be4
   RNSentry: 4f6907f9a4a41058988ebaa17666e9a402b50ff2
+  RNSVG: 1a8855adeb20c5beb0a808281608315fc1092d15
   Sentry: 9d055e2de30a77685e86b219acf02e59b82091fc
   Yoga: 4bd86afe9883422a7c4028c00e34790f560923d6
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
