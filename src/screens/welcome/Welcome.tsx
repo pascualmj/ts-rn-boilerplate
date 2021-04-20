@@ -2,6 +2,7 @@ import React, {useEffect} from 'react'
 import {View, Text, Button} from 'react-native'
 import {StackScreenProps} from '@react-navigation/stack'
 
+import {BaseText} from '../../components'
 import {HOME_ROUTE} from '../../navigation/constants/routes'
 import {RootStackParamList} from '../../navigation/screens'
 import {useAppSelector, useAppDispatch} from '../../hooks/storeHooks'
@@ -12,7 +13,7 @@ export interface WelcomeProps
   extends IThemeProps,
     StackScreenProps<RootStackParamList, 'WelcomeRoute'> {}
 
-const Welcome: React.FC<WelcomeProps> = ({navigation, theme}) => {
+const Welcome: React.FC<WelcomeProps> = ({navigation}) => {
   const dispatch = useAppDispatch()
   const title = useAppSelector(welcomeValueSelector)
 
@@ -24,13 +25,7 @@ const Welcome: React.FC<WelcomeProps> = ({navigation, theme}) => {
 
   return (
     <View>
-      <Text
-        style={{
-          fontFamily: theme?.fonts?.rubikExtraBold,
-          color: theme?.colors?.coolPink
-        }}>
-        {title}
-      </Text>
+      <BaseText text={title} />
       <Button onPress={goHome} title="Go to home" />
     </View>
   )

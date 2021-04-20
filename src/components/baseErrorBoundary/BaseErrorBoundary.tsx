@@ -1,8 +1,11 @@
 import React, {Component, ErrorInfo, ReactNode} from 'react'
-import {View, Text, Button, StyleSheet} from 'react-native'
+import {View, Button, StyleSheet} from 'react-native'
 import RNRestart from 'react-native-restart'
 
-interface IErrorBoundaryProps {
+import {BaseText} from '..'
+import {withTheme, IThemeProps} from '../../services/themes'
+
+interface IErrorBoundaryProps extends IThemeProps {
   children: ReactNode
   logger: (err: Error) => unknown
 }
@@ -35,7 +38,7 @@ class ErrorBoundary extends Component<IErrorBoundaryProps, IErrorBoundaryState> 
     if (this.state.error) {
       return (
         <View style={styles.wrapper}>
-          <Text>Oops! Algo salió mal...</Text>
+          <BaseText text="Oops! Algo salió mal..." color={this.props.theme?.colors.chillGrey} />
           <Button onPress={this.restartApp} title="Volver" />
         </View>
       )
@@ -53,4 +56,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default ErrorBoundary
+export default withTheme<IErrorBoundaryProps>(ErrorBoundary)

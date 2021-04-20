@@ -1,7 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BaseText Snapshot Test 1`] = `
-<Text>
+<Text
+  navigation={
+    Object {
+      "navigate": [MockFunction],
+    }
+  }
+  style={
+    Array [
+      Object {
+        "color": "#000",
+        "fontFamily": "Rubik-Regular",
+        "fontSize": 14,
+      },
+      Object {},
+    ]
+  }
+>
   Foo
 </Text>
 `;
