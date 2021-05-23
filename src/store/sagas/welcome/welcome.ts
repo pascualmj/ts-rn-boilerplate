@@ -6,7 +6,6 @@ import {
   fetchWelcome as fetchWelcomeAction
 } from '../../slices/welcome/welcome'
 import {fetchWelcome, IFetchWelcomeParsed} from '../../api/welcome/welcome'
-import {navigate} from '../../../services/navigation'
 
 export function* fetchWelcomeWorker(): Generator<StrictEffect, void, IFetchWelcomeParsed> {
   try {
@@ -15,7 +14,6 @@ export function* fetchWelcomeWorker(): Generator<StrictEffect, void, IFetchWelco
     yield put(fetchTitleSuccess(data.primary))
   } catch (err) {
     yield put(fetchTitleFailure())
-    yield call(navigate, 'HomeRoute')
   }
 }
 

@@ -29,7 +29,7 @@ describe('Sagas: welcome', () => {
     test('Should do something in case of error...', async () => {
       apiClientMock.get.mockImplementation(() => Promise.reject())
 
-      const {dispatched, navigationService} = await runSaga({
+      const {dispatched} = await runSaga({
         saga: fetchWelcomeWorker,
         initialState: {
           welcome: {
@@ -41,7 +41,6 @@ describe('Sagas: welcome', () => {
       expect(dispatched[0]).toEqual(fetchTitleStart())
       expect(apiClientMock.get).toHaveBeenCalledTimes(1)
       expect(dispatched[1]).toEqual(fetchTitleFailure())
-      expect(navigationService.navigate).toHaveBeenCalledWith('HomeRoute')
     })
   })
 })

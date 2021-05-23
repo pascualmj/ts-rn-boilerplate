@@ -1,5 +1,6 @@
 export type ThemeProps = {
   colors: {
+    white: string
     coolPink: string
     waterBlue: string
     chillGrey: string
@@ -20,6 +21,7 @@ export interface IThemeProps {
 
 export const lightTheme: ThemeProps = {
   colors: {
+    white: '#fff',
     coolPink: '#e14159',
     waterBlue: '#5d7ef9',
     chillGrey: '#aaa',
