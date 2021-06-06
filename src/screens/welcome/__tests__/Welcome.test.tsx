@@ -8,18 +8,12 @@ const Welcome = WelcomeComponent as React.FC<Partial<WelcomeProps>>
 
 describe('Welcome Screen', () => {
   test('Should render the title correctly', () => {
-    const {getByText, navigation} = render(<Welcome {...{theme: lightTheme}} />, {
-      initialState: {
-        welcome: {
-          value: 'Hi from RN!'
-        }
-      }
-    })
-    const button = getByText(/go to home/i)
+    const {getByText, navigation} = render(<Welcome {...{theme: lightTheme}} />)
+    const button = getByText(/get started/i)
 
     fireEvent.press(button)
 
     expect(navigation.navigate).toHaveBeenCalled()
-    expect(getByText('Hi from RN!')).toBeDefined()
+    expect(getByText(/Welcome/i)).toBeDefined()
   })
 })

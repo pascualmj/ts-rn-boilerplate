@@ -1,32 +1,34 @@
-import React, {useEffect} from 'react'
-import {Button} from 'react-native'
+import React from 'react'
+import {View, StatusBar} from 'react-native'
 import {StackScreenProps} from '@react-navigation/stack'
 
-import {BaseText, BaseSafeWrapper} from '../../components'
-import {HOME_ROUTE} from '../../navigation/constants/routes'
+import {BaseText, BaseSafeWrapper, BaseButton} from '../../components'
 import {RootStackParamList} from '../../navigation/screens'
-import {useAppSelector, useAppDispatch} from '../../hooks/storeHooks'
-import {fetchWelcome, welcomeValueSelector} from '../../store/slices/welcome/welcome'
 import {withTheme, IThemeProps} from '../../services/themes'
+import makeStyles from './Welcome.styles'
 
 export interface WelcomeProps
   extends IThemeProps,
     StackScreenProps<RootStackParamList, 'WelcomeRoute'> {}
 
-const Welcome: React.FC<WelcomeProps> = ({navigation}) => {
-  const dispatch = useAppDispatch()
-  const title = useAppSelector(welcomeValueSelector)
+const Welcome: React.FC<WelcomeProps> = ({theme, navigation}) => {
+  const styles = makeStyles(theme)
 
-  useEffect(() => {
-    dispatch(fetchWelcome())
-  }, [dispatch])
-
-  const goHome = () => navigation.navigate(HOME_ROUTE)
+  const start = () => navigation.navigate('HomeRoute')
 
   return (
-    <BaseSafeWrapper isFullScreen edges={['left', 'top', 'right', 'bottom']}>
-      <BaseText text={title} />
-      <Button onPress={goHome} title="Go to home" />
+    <BaseSafeWrapper isFullScreen applyAllInsets style={styles.safeWrapper}>
+      <StatusBar barStyle={'light-content'} />
+      <View style={styles.body}>
+        <BaseText style={styles.title} text="Welcome! 😄" />
+      </View>
+      <BaseButton
+        text="Let's get started! 🚀"
+        bgColor={theme?.colors.white}
+        textColor={theme?.colors.waterBlue}
+        style={styles.button}
+        onPress={start}
+      />
     </BaseSafeWrapper>
   )
 }

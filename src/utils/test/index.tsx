@@ -42,9 +42,9 @@ const mockedNavigation: IMockedNavigationProps = {
 
 export const render = (
   Component: React.ReactElement,
-  options: IRenderOptions
+  options?: IRenderOptions
 ): IRenderReturnValue => {
-  const store = mockStore(options.initialState || {})
+  const store = mockStore(options?.initialState || {})
 
   return {
     ...TestingLibraryRN.render(

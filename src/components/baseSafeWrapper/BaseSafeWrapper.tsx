@@ -6,19 +6,23 @@ import styles from './BaseSafeWrapper.styles'
 
 interface BaseSafeWrapperProps extends NativeSafeAreaViewProps {
   isFullScreen?: boolean
+  applyAllInsets?: boolean
 }
 
 const BaseSafeWrapper: React.FC<BaseSafeWrapperProps> = ({
   children,
-  edges = ['left', 'right', 'bottom'],
+  edges = ['left', 'bottom', 'right'],
   isFullScreen,
+  applyAllInsets,
   style = {},
   ...otherProps
 }) => {
+  const formattedEdges = applyAllInsets ? [] : edges
+
   return (
     <SafeAreaView
       style={[applyStylesIf(isFullScreen, styles.fullScreenStyles), style]}
-      edges={edges}
+      edges={formattedEdges}
       {...otherProps}>
       {children}
     </SafeAreaView>
